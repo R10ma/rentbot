@@ -55,8 +55,13 @@ def fetch_listings(url):
 
 def matches(item):
     if item["price"] is not None and item["price"] > MAX_PRICE:
+        print(f"SKIP (price {item['price']}): {item['title']}")
         return False
-    # If the card text mentions no known area, keep it (the search URL already filters by area).
+    text = item["text"]
+    in_area = any(a in text for a in AREAS) or any(re.search(rf"\b{p}\b", text) for p in POSTCODES)
+    if not in_area and not KEEP_IF_AREA_UNKNOWN:
+        print(f"SKIP (area): {item['title']}")
+        return False
     return True
 
 
