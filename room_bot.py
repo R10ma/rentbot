@@ -14,6 +14,7 @@ AREAS = ["islands brygge", "sydhavn", "frederiksberg", "østerbro", "osterbro", 
 # Paste here the search URLs you get in your browser AFTER applying the filters
 # on each site (rooms, Copenhagen, max price). One URL per source/page.
 SEARCH_URLS = [
+    https://www.boligportal.dk/v%C3%A6relser/?zoom=10.8&center=12.57435%2C55.67080&min_lat=55.61219&min_lng=12.42908&max_lat=55.72933&max_lng=12.71962&max_monthly_rent=6800
     # "https://www.boligportal.dk/...paste your filtered search URL...",
 ]
 # Which links on the page count as listings (regex on the href). Adjust per site.
