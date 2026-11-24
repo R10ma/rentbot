@@ -10,11 +10,14 @@ from bs4 import BeautifulSoup
 
 # ---------- CONFIG ----------
 MAX_PRICE = 6600  # DKK/month
-AREAS = ["islands brygge", "sydhavn", "frederiksberg", "østerbro", "osterbro"]
+AREAS = ["islands brygge", "sydhavn", "frederiksberg", "østerbro", "osterbro",
+         "vesterbro", "nørrebro", "norrebro"]
+POSTCODES = ["2300", "2450", "1800", "1900", "2000", "2100",
+             "1700", "1710", "1720", "1730", "1740", "1750", "1760", "1770", "1780", "1790", "2200"]
 # Postcodes help when a listing shows only the address, not the neighbourhood name.
 # 2300 = København S (Islands Brygge, but also the rest of Amager), 2450 = København SV (Sydhavn),
 # 1800/1900/2000 = Frederiksberg, 2100 = København Ø (Østerbro, plus Nordhavn)
-POSTCODES = ["2300", "2450", "1800", "1900", "2000", "2100"]
+
 KEEP_IF_AREA_UNKNOWN = False  # True = keep listings where no area or postcode is found
 # Paste here the search URLs you get in your browser AFTER applying the filters
 # on each site (rooms, Copenhagen, max price). One URL per source/page.
